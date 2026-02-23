@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day02</title>
+</head>
+
+<body>
+    <script>
+        // write the program to find the grastest number of 4 by geting user ?
+
+        let num1 = Number(prompt("enter the number first:"));
+        let num2 = Number(prompt("enter the number second:"));
+        let num3 = Number(prompt("enter the number third:"));
+        let num4 = Number(prompt("enter the number fourth:"));
+
+        if (num1 > num2) {
+            if (num1 > num3) {
+                if (num1 > num4) {
+                    document.writeln(`the value of num1 = ${num1} is greastest`);
+                }
+                else {
+                    document.writeln(`the value of num4 = ${num4} is greastest`);
+
+                }
+            }
+            else {
+                if (num3 > num4) {
+                    document.writeln(`the value of num3 = ${num3} is greastest`);
+
+                }
+                else {
+                    document.writeln(`the value of num4 = ${num4} is greastest`);
+
+                }
+            }
+        }
+        else {
+            if (num2 > num3) {
+                if (num2 > num4) {
+                    document.writeln(`the value of num2 = ${num2} is greastest`);
+
+                }
+                else {
+                    document.writeln(`the value of num4 = ${num4} is greastest`);
+
+                }
+            }
+            else {
+                if (num3 > num4) {
+                    document.writeln(`the value of num3 = ${num3} is greastest`);
+                }
+                else {
+                    document.writeln(`the value of num4 = ${num4} is greastest`);
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>
