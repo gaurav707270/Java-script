@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day03</title>
+</head>
+
+<body>
+    <script>
+        let num1 = Number(prompt("enter the frist number :"));
+        let num2 = Number(prompt("enter the second number :"));
+        let num3 = Number(prompt("enter the third number :"));
+        let num4 = Number(prompt("enter the fourth number :"));
+        let num5 = Number(prompt("enter the fifth number :"));
+
+        if (num1 > num2) {
+            if (num1 > num3) {
+                if (num1 > num4) {
+                    if (num1 > num5) {
+                        document.writeln(`the value of num1 = ${num1} is greastest`);
+                    }
+                    else {
+                        document.writeln(`the value of num5 = ${num5} is greastest`);
+
+                    }
+                }
+                else {
+                    document.writeln(`the value of num4 = ${num4} is greastest`);
+
+                }
+
+            }
+            else {
+                document.writeln(`the value of num3 = ${num3} is greastest`);
+
+            }
+        }
+        else {
+            if (num2 > num3) {
+                if (num2 > num4) {
+                    if (num2 > num5) {
+                        document.writeln(`the value of num2 = ${num2} is greastest`);
+                    }
+                    else {
+                        document.writeln(`the value of num5 = ${num5} is greastest`);
+
+                    }
+
+                }
+                else {
+                    document.writeln(`the value of num4 = ${num4} is greastest`);
+
+                }
+            }
+            else {
+                if (num3 > num4) {
+                    if (num3 > num5) {
+                        document.writeln(`the value of num3 = ${num3} is greastest`);
+                    }
+                    else {
+                        document.writeln(`the value of num5 = ${num5} is greastest`);
+                    }
+                }
+                else {
+                    if (num4 > num5) {
+                        document.writeln(`the value of num4 = ${num4} is greastest`);
+                    }
+                    else {
+                        document.writeln(`the value of num5 = ${num5} is greastest`);
+                    }
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>
