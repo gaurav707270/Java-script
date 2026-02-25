@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day04</title>
+</head>
+
+<body>
+    <script>
+
+        // write the program  to find based on percentage of user  given marks out of 100 using else if ?
+
+        let sub1 = Number(prompt("enter the marks of frist subject :"));
+        let sub2 = Number(prompt("enter the marks of second subject :"));
+        let sub3 = Number(prompt("enter the marks of third subject :"));
+        let sub4 = Number(prompt("enter the marks of fourth subject :"));
+        let sub5 = Number(prompt("enter the marks of fifth subject :"));
+
+        let totalMarks = sub1 + sub2 + sub3 + sub4 + sub5;
+
+        let percentage = totalMarks / 5;
+
+        if (percentage > 91 && percentage < 100) {
+            document.writeln("you score grade is A");
+        }
+        else if (percentage > 81 && percentage < 90) {
+            document.writeln("you score grade is B");
+        }
+        else if (percentage > 71 && percentage < 80) {
+            document.writeln("you score grade is C");
+        }
+        else if (percentage > 61 && percentage < 70) {
+            document.writeln("you score grade is C");
+        }
+        else if (percentage > 51 && percentage < 60) {
+            document.writeln("you score grade is d");
+        }
+        else if (percentage > 40 && percentage < 50) {
+            document.writeln("you score grade is P");
+        }
+        else {
+            document.writeln("you are failed")
+        }
+
+
+    </script>
+</body>
+
+</html>

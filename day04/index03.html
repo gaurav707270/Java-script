@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day04</title>
+</head>
+
+<body>
+    <script>
+        // write the program to calcilate electricity bill using else if ladder ?
+
+        // 1 to to 20 -> 2rs /unit
+        // 21 to to 40 -> 4rs /unit
+        // 41 to to 60 -> 6rs /unit
+        // 61 to to 80 -> 8rs /unit
+        // unit > 80 -> 10rs /unit
+
+        let unit = Number(prompt("enter the you total unit :"))
+
+        if (unit > 1 && unit < 20) {
+            document.writeln(unit * 2)
+        }
+        else if (unit > 21 && unit < 40) {
+            document.writeln(unit * 4)
+        }
+        else if (unit > 41 && unit < 60) {
+            document.writeln(unit * 6)
+        }
+        else if (unit > 61 && unit < 80) {
+            document.writeln(unit * 8)
+        }
+        else {
+            document.writeln(unit * 10)
+        }
+    </script>
+</body>
+
+</html>
