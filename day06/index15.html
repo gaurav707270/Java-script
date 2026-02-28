@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let num = 7;
+        let i = 2;
+        let isPrime = true;
+
+        // while loop
+        if (num <= 1) {
+            isPrime = false;
+        }
+
+        while (i <= Math.sqrt(num) && isPrime) {
+            if (num % i === 0) {
+                isPrime = false;
+            }
+            i++;
+        }
+
+        if (isPrime) {
+            console.log("Number is Prime");
+        } else {
+            console.log("Number is Not Prime");
+        }
+
+
+
+        // do while loop 
+        if (num <= 1) {
+            isPrime = false;
+        }
+
+        if (num > 1) {
+            do {
+                if (num % i === 0 && i !== num) {
+                    isPrime = false;
+                    break;
+                }
+                i++;
+            } while (i <= Math.sqrt(num));
+        }
+
+        if (isPrime) {
+            console.log("Number is Prime");
+        } else {
+            console.log("Number is Not Prime");
+        }
+
+        // for loop
+        if (num <= 1) {
+            isPrime = false;
+        }
+
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) {
+            console.log("Number is Prime");
+        } else {
+            console.log("Number is Not Prime");
+        }
+    </script>
+</body>
+
+</html>

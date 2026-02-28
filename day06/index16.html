@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = 153;
+        let original = num;
+        let sum = 0;
+        let digits = num.toString().length;  // Count digits
+
+        // while loop
+        while (num > 0) {
+            let digit = num % 10;
+            sum = sum + Math.pow(digit, digits);
+            num = Math.floor(num / 10);
+        }
+
+        if (sum === original) {
+            console.log("Number is Armstrong");
+        } else {
+            console.log("Number is Not Armstrong");
+        }
+
+        // do while 
+        do {
+            let digit = num % 10;
+            sum = sum + Math.pow(digit, digits);
+            num = Math.floor(num / 10);
+        } while (num > 0);
+
+        if (sum === original) {
+            console.log("Number is Armstrong");
+        } else {
+            console.log("Number is Not Armstrong");
+        }
+
+        // for loop
+
+        for (; num > 0; num = Math.floor(num / 10)) {
+            let digit = num % 10;
+            sum = sum + Math.pow(digit, digits);
+        }
+
+        if (sum === original) {
+            console.log("Number is Armstrong");
+        } else {
+            console.log("Number is Not Armstrong");
+        }
+
+    </script>
+</body>
+
+</html>

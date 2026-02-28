@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = 1729;
+        let sum = num;
+
+        // while loop
+        while (sum > 9) {
+            let temp = sum;
+            sum = 0;
+
+            while (temp > 0) {
+                sum += temp % 10;
+                temp = Math.floor(temp / 10);
+            }
+        }
+
+        if (sum === 1) {
+            console.log("Number is Magic");
+        } else {
+            console.log("Number is Not Magic");
+        }
+
+        // do while 
+
+        do {
+            let temp = sum;
+            sum = 0;
+
+            do {
+                sum += temp % 10;
+                temp = Math.floor(temp / 10);
+            } while (temp > 0);
+
+        } while (sum > 9);
+
+        if (sum === 1) {
+            console.log("Number is Magic");
+        } else {
+            console.log("Number is Not Magic");
+        }
+
+        //for loop
+
+        for (; sum > 9;) {
+            let temp = sum;
+            sum = 0;
+
+            for (; temp > 0; temp = Math.floor(temp / 10)) {
+                sum += temp % 10;
+            }
+        }
+
+        if (sum === 1) {
+            console.log("Number is Magic");
+        } else {
+            console.log("Number is Not Magic");
+        }
+    </script>
+</body>
+
+</html>

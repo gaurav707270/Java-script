@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = 12345;
+        let count = 0;
+
+        // while loop
+        while (num > 0) {
+            num = Math.floor(num / 10);
+            count++;
+        }
+
+        console.log("Total digits:", count);
+
+        // do while loop
+
+        do {
+            num = Math.floor(num / 10);
+            count++;
+        } while (num > 0);
+
+        console.log("Total digits:", count);
+
+        // for loop 
+
+        for (; num > 0; num = Math.floor(num / 10)) {
+            count++;
+        }
+
+        console.log("Total digits:", count);
+
+
+    </script>
+</body>
+
+</html>
