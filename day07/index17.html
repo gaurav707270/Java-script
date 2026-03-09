@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a JavaScript program to calculate total marks and percentage of 5 subjects.
+
+
+        let subject1 = parseFloat(prompt("Enter marks of subject 1:"));
+        let subject2 = parseFloat(prompt("Enter marks of subject 2:"));
+        let subject3 = parseFloat(prompt("Enter marks of subject 3:"));
+        let subject4 = parseFloat(prompt("Enter marks of subject 4:"));
+        let subject5 = parseFloat(prompt("Enter marks of subject 5:"));
+
+
+        let totalMarks = subject1 + subject2 + subject3 + subject4 + subject5;
+
+        let percentage = (totalMarks / 500) * 100;
+
+
+        alert("Total Marks: " + totalMarks + "\nPercentage: " + percentage + "%");
+    </script>
+</body>
+
+</html>
