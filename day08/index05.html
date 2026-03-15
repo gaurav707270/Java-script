@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a function that counts how many even numbers are present in an array.
+
+        let array = [12, 45, 78, 45, 71, 78, 98, 52, 45, 25, 52];
+
+        function countEven() {
+            count = 0
+            array.forEach((i) => {
+                if (i % 2 == 0) {
+                    count += i
+                }
+                console.log(count)
+            })
+
+        }
+
+        countEven(array)
+    </script>
+</body>
+
+</html>

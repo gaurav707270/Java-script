@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a function that takes an array and returns a new array containing only positive numbers.
+
+        let array = [-1, -787, 87, -48, 500, 45, -25, -58]
+
+        function findPositive() {
+            let newArray = [];
+            array.forEach((i) => {
+                if (i > 0) {
+                    newArray += i
+                }
+            })
+            return newArray
+        }
+
+        console.log(findPositive(array));
+    </script>
+</body>
+
+</html>

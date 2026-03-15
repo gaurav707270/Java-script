@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Write a function that takes an array of numbers and returns the sum of all elements.
+
+        let array = [45, 14, 14, 52, 7, 8, 45, 25, 25, 25, 125, 62];
+
+        const total_sum = function sumOfArray(arr) {
+            let sum = 0;
+
+            arr.forEach((i) => {
+                sum += i;
+            });
+
+            return sum;
+        }
+
+        console.log(total_sum(array));
+
+    </script>
+</body>
+
+</html>

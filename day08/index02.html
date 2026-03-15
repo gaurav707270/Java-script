@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //2. Write a function that takes an array and returns the largest number in the array.
+
+        let array = [12, 45, 7, 45, 632, 78, 45, 656, 262];
+
+        function findLargest(array) {
+            let largest = array[0];
+            array.forEach((i) => {
+                if (i > largest) {
+                    largest = i;
+                }
+            });
+            return largest;
+        }
+
+        console.log(findLargest(array));
+    </script>
+</body>
+
+</html>

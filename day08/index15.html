@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 15. Write a function that sorts an array in ascending order without using sort().
+
+        let array = [45, 7, 1, 245, 41, 5, 17, 12, 42, 2, 25];
+
+        function sortArray(arr) {
+            let newArray = arr.sort((a, b) => a - b);
+            return newArray;
+        }
+
+        console.log(sortArray(array));
+    </script>
+</body>
+
+</html>

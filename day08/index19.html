@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a function that converts all string elements in an array to uppercase.
+
+        function toUpperCaseArray(arr) {
+            let newArray = [];
+
+            arr.forEach((item) => {
+                newArray.push(item.toUpperCase());
+            });
+
+            return newArray;
+        }
+
+        let words = ["apple", "banana", "mango", "orange"];
+
+        console.log(toUpperCaseArray(words));
+    </script>
+</body>
+
+</html>

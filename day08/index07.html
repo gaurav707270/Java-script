@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a function that takes an array and returns the average of all numbers.
+
+        let array = [95, 98, 92, 93, 94, 96, 99];
+
+        function findAverage() {
+            let sum = 0;
+
+            array.forEach((i) => {
+                sum += i;
+
+            })
+            let average = sum / array.length
+            return average
+        }
+
+        console.log(findAverage(array));
+    </script>
+</body>
+
+</html>

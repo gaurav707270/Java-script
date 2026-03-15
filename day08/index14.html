@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a function that checks whether a given value exists in an array or not.
+
+        let array = [45, 7, 84, 5, 25, 68, 6, 46, 55];
+
+        function findValue() {
+            let x = 84;
+
+            array.forEach((i) => {
+                if (i === x) {
+                    console.log("the value of x is exists");
+                }
+                else {
+                    console.log("the value of x in dont not exists");
+                }
+            })
+        }
+
+        findValue(array)
+    </script>
+</body>
+
+</html>

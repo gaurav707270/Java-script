@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  Write a function that finds the total number of elements greater than 10 in an array.
+
+        let array = [15, 45, 1, 5, 48, 3, 47, 52, 9, 10];
+
+        function greater10(arr) {
+            let newArray = [];
+
+            arr.forEach((i) => {
+                if (i > 10) {
+                    newArray.push(i);
+                }
+            });
+
+            return newArray;
+        }
+
+        console.log(greater10(array));
+    </script>
+</body>
+
+</html>
