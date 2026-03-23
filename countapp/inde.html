@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>count app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class=" bg-dark">
+    <div class=" w-100 vh-100 d-flex justify-content-center text-center align-items-center">
+        <div class="w-100">
+            <h1 class=" fs-1 text-white" id="count">
+                0
+            </h1>
+
+            <div class=" w-100 ">
+                <button style="width: 150px;" class=" mt-2 rounded rounded-3 fs-3 m-2 btn btn-primary ">++</button>
+                <button style="width: 150px;" class=" mt-2 rounded rounded-3 fs-3 m-2 btn btn-secondary ">--</button>
+                <button style="width: 150px;" class=" mt-2 rounded rounded-3 fs-3 m-2 btn btn-success ">*2</button>
+                <button style="width: 150px;" class=" mt-2 rounded rounded-3 fs-3 m-2 btn btn-warning ">/2</button>
+                <button style="width: 150px;" class=" mt-2 rounded rounded-3 fs-3 m-2  btn btn-info">%2</button>
+            </div>
+
+            <div>
+                <button style="width: 300px;" class=" mt-4 rounded rounded-3 fs-3 m-2 btn btn-danger ">
+                    Clear
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const count = document.getElementById("count")
+        const button = document.getElementsByTagName("button")
+
+        button[0].addEventListener("click", () => {
+            count.textContent++
+        })
+
+        button[1].addEventListener("click", () => {
+            count.textContent--
+        })
+
+        button[2].addEventListener("click", () => {
+            count.textContent *= 2
+        })
+
+        button[3].addEventListener("click", () => {
+            count.textContent /= 2
+        })
+
+        button[4].addEventListener("click", () => {
+            count.textContent %= 2
+        })
+
+        button[5].addEventListener("click", () => {
+            count.textContent = 0
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
