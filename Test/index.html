@@ -100,7 +100,7 @@
         generateBtn.addEventListener("click", () => {
 
             buttons.forEach((btn, index) => {
-                if (btn.id !== "generate-btn") { // generate button ko skip karo
+                if (btn.id !== "generate-btn") {
                     const color = getRandomColor();
                     btn.style.backgroundColor = color;
                 }
