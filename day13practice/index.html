@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <section class=" vh-100 ">
+        <div class="container d-flex justify-content-center align-items-center h-100">
+            <input class=" rounded rounded-3 p-2 m-2" type="text" placeholder=" enter the name">
+            <button class=" btn btn-outline-success" id="submite-btn"> submite</button>
+
+        </div>
+
+        <div id="list">
+
+        </div>
+
+    </section>
+
+    <script>
+
+        // const input = document.getElementsByTagName("input");
+        // const submite_btn = document.getElementById("submite-btn")
+        // const show_list = document.getElementById("list")
+
+        // const users = [];
+
+        // function addUsers() {
+        //     submite_btn.addEventListener("click", () => {
+        //         users.push(input.value)
+        //         console.log(users[0])
+        //     })
+        // }
+
+        // addUsers()
+
+        const user = Number(prompt("enter the number you find"))
+
+        const arr = [4, 7, 8, 5, 8, 9, 6, 32, 5, 1, 4,];
+        // let n= arr[0];
+        // n+arr[i+1]==9;
+        // return 
+
+
+        // for (let i = arr[0]; i <= arr.length - 1; ++i) {
+        //     let index = 0;
+        //     while (i == user) {
+        //         console.log(`the value is find at this index ${index} the value is ${1}`)
+        //         index++
+        //      }
+        // }
+
+        arr.reduce((acc, curr) => {
+
+            console.log(acc, curr)
+            // while (acc + curr == user) {
+            //     console.log(acc[], curr[i])
+            // }
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
