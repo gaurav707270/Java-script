@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finder</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-white">
+
+    <div class="container my-5">
+
+        <h1 class="text-center mb-4">📚 Find Books</h1>
+
+        <div class="d-flex justify-content-center mb-4">
+            <div class="input-group w-50">
+                <input id="searchInput" type="text" class="form-control" placeholder="Search books...">
+                <button id="searchBtn" class="btn btn-success">Search</button>
+            </div>
+        </div>
+
+        <div id="booksContainer" class="row g-3"></div>
+
+    </div>
+
+    <script>
+        const API_KEY = "AIzaSyAp9FkuYc-fEX1ADIYyWx8SnI17gsOGDmU";
+
+        const searchInput = document.getElementById("searchInput");
+        const searchBtn = document.getElementById("searchBtn");
+        const booksContainer = document.getElementById("booksContainer");
+
+
+        function fetchBooks(query = "ramayana") {
+
+            fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&key=${API_KEY}`)
+                .then((res) => res.json())
+                .then((data) => {
+                    displayBooks(data.items || []);
+                })
+                .catch((err) => {
+                    console.log("Error:", err);
+                });
+        }
+
+        function displayBooks(books) {
+            booksContainer.innerHTML = "";
+
+            if (books.length === 0) {
+                booksContainer.innerHTML = "<h3 class='text-center'>No books found 😢</h3>";
+                return;
+            }
+
+            books.forEach(book => {
+                const info = book.volumeInfo;
+
+                const col = document.createElement("div");
+                col.className = "col-md-3";
+
+                col.innerHTML = `
+                <div class="card h-75">
+                    <img  src="${info.imageLinks?.thumbnail || 'https://via.placeholder.com/150'}" class="card-img-top h-50"  >
+
+                    <div class="card-body text-dark">
+                        <h5>${info.title || "No Title"}</h5>
+                        <p>Author: ${info.authors?.[0] || "Unknown"}</p>
+                        <p>Published: ${info.publishedDate || "N/A"}</p>
+                        <p>Pages: ${info.pageCount || "N/A"}</p>
+
+                        <a href="${info.previewLink}" target="_blank" class="btn btn-primary btn-sm">Preview</a>
+                    </div>
+                </div>
+                `;
+
+                booksContainer.appendChild(col);
+            });
+        }
+
+
+        searchBtn.addEventListener("click", () => {
+            const query = searchInput.value.trim();
+            fetchBooks(query || "ramayana");
+        });
+
+
+        searchInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                searchBtn.click();
+            }
+        });
+
+
+        fetchBooks();
+    </script>
+
+</body>
+
+</html>
