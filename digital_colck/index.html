@@ -9,43 +9,80 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-<body class="p-5 vh-100">
+<body>
 
 
-    <div class=" text-center h-25">
-        <h1> Digital Clock</h1>
+    <div id="container" class="p-5 vh-100 w-100 ">
+
+
+        <div class=" text-center h-25">
+            <h1 class=" "> Digital Clock</h1>
+        </div>
+
+
+
+
+        <div class="w-100 d-flex justify-content-center  ">
+            <div class=" w-25   bg-white  border border-black rounded rounded-3 bg-black shadow  ">
+
+                <div class=" d-flex w-100 justify-content-evenly p-2 border border-3 border-black rounded-3">
+
+                    <div>
+                        <div id="hour" class="text-center fs-2 fw-bold"></div>
+                        <p class=" text-center">HOURS</p>
+                    </div>
+
+                    <div>
+                        <div id="minutes" class="text-center fs-2 fw-bold">47</div>
+                        <p class=" text-center">MINUTES</p>
+                    </div>
+
+                    <div class="d-flex">
+                        <div>
+                            <div id="second" class="text-center fs-2 fw-bold">45</div>
+                            <p class=" text-center">SECONDS</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class=" d-flex justify-content-center align-items-center">
+                        <P id="shift" class=" fs-3"> PM</P>
+                    </div>
+
+                </div>
+
+                <div class="border border-3 border-black rounded rounded-3 mt-2">
+                    <div>
+
+                        <div>
+                            <div id="dt" class=" text-center fs-2 ">
+
+                            </div>
+                            <p class=" text-center">Date</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+                        <div class=" w-100">
+                            <div id="day" class="text-center fs-2 fw-bold">FR</div>
+                            <p class=" text-center">DAY</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
     </div>
-
-
-
-
-    <div class=" w-25  d-flex bg-white justify-content-center ">
-        <div class=" w-25">
-            <div class="text-center fs-2 fw-bold">FR</div>
-            <p class=" text-center">DAY</p>
-        </div>
-
-        <div class=" w-25">
-            <div class="text-center fs-2 fw-bold">13</div>
-            <p class=" text-center">HOURS</p>
-        </div>
-
-        <div class=" w-25">
-            <div class="text-center fs-2 fw-bold">47</div>
-            <p class=" text-center">MINUTES</p>
-        </div>
-
-        <div class=" w-25">
-            <div class="text-center fs-2 fw-bold">45</div>
-            <p class=" text-center">SECONDS</p>
-        </div>
-
-
-
-
-    </div>
-
-
 
 
     <script src="app.js"></script>
