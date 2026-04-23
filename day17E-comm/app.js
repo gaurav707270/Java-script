@@ -6,17 +6,21 @@ const saveLocalStorage = (carts) => {
 }
 
 
+let products = [];
+
+const addToCart = (i) => {
+
+    console.log(products[i])
 
 
-const addToCart = (product) => {
 
     let carts = JSON.parse(localStorage.getItem("carts")) || [];
 
 
-    const exists = carts.find((item) => item.id === product.id);
+    const exists = carts.find((item) => item.id === products[i].id);
 
     if (!exists) {
-        carts.push(product);
+        carts.push(products[i]);
         saveLocalStorage(carts);
         console.log("Added to cart", carts);
     } else {
@@ -28,7 +32,7 @@ const addToCart = (product) => {
 fetch('https://dummyjson.com/products')
     .then(res => res.json())
     .then((data) => {
-        const products = data.products;
+        products = data.products;
 
         products.forEach((product, i) => {
             const div = document.createElement("div");
@@ -41,7 +45,7 @@ fetch('https://dummyjson.com/products')
                     <p>₹${product.price * 93}</p>
 
                     <button class="btn btn-primary"
-                        onclick='addToCart(${JSON.stringify(product, i)})'>
+                        onclick='addToCart(${i})'>
                         Add to Cart
                     </button>
 
