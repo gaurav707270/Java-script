@@ -30,7 +30,7 @@ const displayCart = () => {
             <img src="${product.images[0]}" class="card-img-top">
             <div class="card-body">
                 <h5>${product.title}</h5>
-                <p>₹${product.price}</p>
+                <p>₹${product.price * 93}</p>
 
                 <div class="d-flex justify-content-between align-items-center">
 
@@ -59,7 +59,7 @@ const displayCart = () => {
     });
 
 
-    total.textContent = `Total : ₹ ${totalPrice.toFixed(2)} /-`;
+    total.textContent = `Total : ₹ ${totalPrice.toFixed(2) * 93} /-`;
 };
 
 
