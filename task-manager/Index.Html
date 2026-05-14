@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Task Manager</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    
 </head>
 
 <body class="bg-dark">
@@ -21,7 +21,7 @@
             <h5 class="mb-3">Add New Task</h5>
 
             <!-- Add task section -->
-            <form class="row g-3">
+            <div class="row g-3">
                 <div class="col-md-6">
                     <input id="input-task-text" type="text" class="form-control" placeholder="Enter Task Title">
                 </div>
@@ -38,14 +38,14 @@
                 <div class="col-md-2">
                     <button id="task-add-btn" class="btn btn-primary w-100">Add</button>
                 </div>
-            </form>
+            </div>
         </div>
 
         <div class="card shadow p-4 mb-4">
             <h5 class="mb-3">Search Task</h5>
 
             <!-- search task section -->
-            <form class="row g-3">
+            <div class="row g-3">
                 <div class="col-md-4">
                     <input id="input-search-task" type="text" class="form-control" placeholder="Search by Title">
                 </div>
@@ -62,15 +62,15 @@
                 <div class="col-md-3">
                     <select id="search-task-status" class="form-select">
                         <option selected>Status</option>
-                        <option>Completed</option>
-                        <option>Pending</option>
+                        <option value="Done">Done</option>
+                        <option value="Undo">Undo</option>
                     </select>
                 </div>
 
                 <div class="col-md-2">
                     <button id="search_task_btn" class="btn btn-dark w-100">Search</button>
                 </div>
-            </form>
+            </div>
         </div>
 
 
@@ -87,6 +87,11 @@
         </div>
 
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
 
     <script src="App.js"></script>
 </body>
