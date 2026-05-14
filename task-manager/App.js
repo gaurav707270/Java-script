@@ -21,7 +21,11 @@ let isUpdate = false;
 let updateIndex = 0;
 
 
-const taskList = JSON.parse(localStorage.getItem("tasks")) || [];
+let taskList = []
+
+const getFromLocalStorage = () => {
+    taskList = JSON.parse(localStorage.getItem("tasks")) || [];
+}
 
 const local_storage = () => {
     localStorage.setItem("tasks", JSON.stringify(taskList));
@@ -34,12 +38,10 @@ const local_storage = () => {
 
 const diplay_tasks = () => {
 
+    console.log("----")
     show_task_box.innerHTML = "";
 
     taskList.map((task, i) => {
-
-
-
 
         const div = document.createElement("div");
 
@@ -106,7 +108,7 @@ const addTask = () => {
 task_add_btn.addEventListener("click", () =>
     isUpdate ? updateTask(updateIndex) : addTask()
 );
-diplay_tasks();
+
 
 
 
@@ -142,30 +144,52 @@ const taskStatus = (i) => {
     local_storage()
     diplay_tasks();
 
-    alert("Task Completed");
+    // alert("Task Completed");
 
 }
 
+const searchPriority = () => {
+
+    getFromLocalStorage();
+
+    const priority = search_task_priority.value;
+    const text = input_search_task.value.toLowerCase();
+    const status = search_task_status.value
+
+
+    // Search by priority
+    if (priority !== "Select Task Priority") {
+        taskList = taskList.filter(
+            (task) => task.priority === priority
+        );
+    }
+
+    // Search by text
+    if (text !== "") {
+        taskList = taskList.filter(
+            (task) =>
+                task.text.toLowerCase().includes(text)
+        );
+    }
+
+    if (status !== "Status") {
+        taskList = taskList.filter((task) =>
+            task.status == status
+        )
+    }
+
+    diplay_tasks()
+};
 
 
 
-// const searchTask = () => {
-
-//     const searchText = input_search_task.value
-//     const searchPriority = input_task_priority.value
-//     const searchStatus = search_task_status.value
-
-//     show_task_box.innerHTML = "";
-
-//     const searchTask = taskList.filter((task) => {
-//         if (searchText == task.text) {
-//             return task
-//         }
-//     })
-
-// }
 
 
 
 
-search_task_btn.addEventListener("click", () => searchTask())
+
+search_task_btn.addEventListener("click", searchPriority)
+
+
+getFromLocalStorage();
+diplay_tasks();
