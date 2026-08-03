@@ -4,7 +4,7 @@
         // question: "A flashing red traffic light signifies that a driver should do what?",
         // A: "stop",
         // B: "speed up",
-        C: "proceed with caution",
+        // C: "proceed with caution",
         D: "honk the horn",
         answer: "A"
     },
