@@ -5,7 +5,7 @@
         // A: "stop",
         // B: "speed up",
         // C: "proceed with caution",
-        // D: "honk the horn",
+        D: "honk the horn",
         answer: "A"
     },
     {
